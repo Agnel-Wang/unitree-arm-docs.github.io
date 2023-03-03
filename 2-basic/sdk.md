@@ -56,6 +56,11 @@ Line9: #set(COMMUNICATION ROS)
 
     **load**: 挂载在机械臂末端的负载重量，单位kg，该值与open设置无关，会一直参与末端负载的动力学计算。
 
+3. gripperTauLimit
+
+   对手爪电机最大输出力矩进行限制，防止夹持物体时长时间输出峰值扭矩进入保护，此时无法控制手爪，需重新上电。
+   此功能在lowcmd状态下不生效。
+
 ### 1.5 config/saveArmStates.csv
 
 该文件存储**labelRun**可到达的点位，记录的数据为该位姿下关节坐标。
